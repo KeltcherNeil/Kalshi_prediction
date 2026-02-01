@@ -42,11 +42,3 @@ def get(private_key, api_key_id, path, base_url=BASE_URL):
 
 # Load private key
 private_key = load_private_key(PRIVATE_KEY_PATH)
-
-# Get balance
-response = get(private_key, API_KEY_ID, "/trade-api/v2/portfolio/balance")
-print(f"Your balance: ${response.json()['balance'] / 100:.2f}")
-
-
-
-
